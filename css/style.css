@@ -1,0 +1,216 @@
+/* ======== global ======== */
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+ }
+
+body {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: #121725;
+    font-family: 'Chivo', sans-serif;
+}
+
+body::before {
+    content: "";
+    background-image: url(/assets/mobile/image-host.jpg);
+    background-repeat: no-repeat;
+    background-blend-mode: screen;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: .1;
+}
+
+/* ======== type ======== */
+
+h1 {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 38px;
+    color: #54E6AF;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.highlight {
+    color: #fff;
+}
+
+p {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 25px;
+    color: #C2CBE5;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+/* ======== elements ======== */
+
+button, input {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    padding: 8px 24px;
+    display: block;
+}
+
+input {
+    background-color: #2C344B;
+    border: none;
+    border-radius: 100px;
+    color: rgba(255, 255, 255, .5);
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+button {
+    background-color: #54E6AF;
+    padding: 8px 24px;
+    border-radius: 50px;
+    border: none;
+    width: 100%;
+}
+
+button:hover,
+button:focus {
+    background-color: #B3FFE2;
+}
+
+
+/* ======== layout ======== */
+
+section {
+    padding: 0 24px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    order: 1
+}
+
+.logos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-bottom: 48px;
+    max-height: 16px;
+}
+
+#pod-logo {
+    display: block;
+    margin: 64px auto 56px;
+}
+
+/* ======== media queries ======== */
+
+@media (min-width: 640px) {
+
+
+    /* ==== global ==== */
+
+    body {
+        padding: 60px;
+    }
+
+    body::before {
+        border: red soild 1px;
+        background-image: url(/assets/tablet/image-host.jpg), url(/assets/desktop/bg-pattern-dots.svg);
+        background-position: top right, bottom left;
+        opacity: 1;
+        background-size: initial;
+        z-index: -1;
+    }
+
+    /* ==== type ==== */
+
+    h1 {
+        font-size: 48px;
+        line-height: 56px;
+        text-align: left;
+        margin-top: 92px;
+        margin-bottom: 32px;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 28px;
+        text-align: left;
+    }
+
+    /* ==== elements ==== */
+
+    button, input {
+        padding: 8px 24px;
+        display: inline;
+        width: fit-content;
+        margin-bottom: 0px;
+    }
+
+    button {
+        width: fit-content;
+    }
+
+    #pod-logo {
+        margin: 40px 50px;
+    }
+
+    /* ==== layout ==== */
+
+    section {
+        background-color: #121725;
+        width: 75vw;
+        margin: 0;
+    }
+
+    .form-container {
+        background-color: #2C344B;
+        width: fit-content;
+        border-radius: 100px;
+        padding: 4px
+    }
+
+    form {
+        order: 0;
+    }
+
+    .logo {
+        margin-top: 64px;
+        margin-bottom: 48px;
+    }
+}
+
+@media (min-width: 1000px) {
+    /* ======== global ======== */
+    body::before {
+        background-image: url(/assets/desktop/image-host.jpg), url(/assets/desktop/bg-pattern-dots.svg);
+        background-position: center right, bottom right;
+    }
+    /* ======== type ======== */
+    h1 {
+        font-size: 52px;
+        line-height: 62px;
+    }
+    p {
+        max-width: 445px;
+    }
+    /* ======== elements ======== */
+    /* ======== layout ======== */
+    section {
+        width: 60vw;
+        max-width: 700px;
+    }
+}
