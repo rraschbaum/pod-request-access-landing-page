@@ -1,5 +1,4 @@
 /* ======== global ======== */
-@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;700&display=swap');
 
 * {
     box-sizing: border-box;
@@ -34,8 +33,8 @@ body::before {
 h1 {
     text-transform: uppercase;
     font-weight: 300;
-    font-size: 26px;
-    line-height: 38px;
+    font-size: 1.625rem;
+    line-height: 2.375rem;
     color: #54E6AF;
     text-align: center;
     margin-bottom: 16px;
@@ -46,21 +45,21 @@ h1 {
 }
 
 p {
-    font-size: 15px;
+    font-size: 0.9375rem;
     font-weight: 300;
     line-height: 25px;
     color: #C2CBE5;
     text-align: center;
-    margin-bottom: 32px;
+    margin-bottom: 1.5625rem;
 }
 
 /* ======== elements ======== */
 
 button, input {
     font-weight: 700;
-    font-size: 14px;
-    line-height: 28px;
-    padding: 8px 24px;
+    font-size: 0.875rem;
+    line-height: 1.75rem;
+    padding: 12px 32px;
     display: block;
 }
 
@@ -75,22 +74,42 @@ input {
 
 button {
     background-color: #54E6AF;
-    padding: 8px 24px;
     border-radius: 50px;
     border: none;
     width: 100%;
 }
 
-button:hover,
-button:focus {
+button:hover {
     background-color: #B3FFE2;
+}
+
+:focus {
+    outline: dashed 2px #54E6AF;
+    outline-offset: 2px;
+}
+
+button:focus,
+input:focus {
+    
+}
+
+::-moz-focus-inner {
+    border: 0;
 }
 
 
 /* ======== layout ======== */
 
-section {
+.container {
     padding: 0 24px;
+}
+
+.pod-logo {
+    display: block;
+    margin: 64px auto 56px;
+}
+
+main {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -100,19 +119,21 @@ form {
     order: 1
 }
 
-.logos {
+.partners {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-}
-
-.logo {
+    flex-basis: 0;
+    width: 100%;
     margin-bottom: 48px;
-    max-height: 16px;
 }
 
-#pod-logo {
-    display: block;
-    margin: 64px auto 56px;
+.partners--item {
+    margin-left: 16px;
+}
+
+.partners--item:first-child {
+    margin-left: 0;
 }
 
 /* ======== media queries ======== */
@@ -122,8 +143,8 @@ form {
 
     /* ==== global ==== */
 
-    body {
-        padding: 60px;
+    .container {
+        padding: 48px 0 0 40px;
     }
 
     body::before {
@@ -138,17 +159,19 @@ form {
     /* ==== type ==== */
 
     h1 {
-        font-size: 48px;
-        line-height: 56px;
+        font-size: 3rem;
+        line-height: 3.5rem;
         text-align: left;
         margin-top: 92px;
         margin-bottom: 32px;
     }
 
     p {
-        font-size: 18px;
-        line-height: 28px;
+        margin-bottom: 40px;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
         text-align: left;
+        max-width: 448px;
     }
 
     /* ==== elements ==== */
@@ -164,27 +187,37 @@ form {
         width: fit-content;
     }
 
-    #pod-logo {
-        margin: 40px 50px;
+    .pod-logo {
+        margin: 0 0;
+        margin-bottom: 150px;
+    }
+
+    .form-container {
+        margin-bottom: 64px;
     }
 
     /* ==== layout ==== */
 
-    section {
+    main {
         background-color: #121725;
-        width: 75vw;
+        width: 83vw;
         margin: 0;
+        padding-right: 24px;
     }
 
     .form-container {
         background-color: #2C344B;
         width: fit-content;
         border-radius: 100px;
-        padding: 4px
+        padding: 5px
     }
 
     form {
         order: 0;
+    }
+
+    .partners {
+        max-width: 536px;
     }
 
     .logo {
@@ -193,24 +226,31 @@ form {
     }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1100px) {
     /* ======== global ======== */
     body::before {
         background-image: url(/assets/desktop/image-host.jpg), url(/assets/desktop/bg-pattern-dots.svg);
-        background-position: center right, bottom right;
+        background-position: center right, right 80vh;
     }
     /* ======== type ======== */
     h1 {
-        font-size: 52px;
-        line-height: 62px;
-    }
-    p {
-        max-width: 445px;
+        font-size: 3.25rem;
+        line-height: 3.875rem;
+        margin-bottom: 24px;
     }
     /* ======== elements ======== */
     /* ======== layout ======== */
-    section {
+
+    .container {
+        padding: 102px 0 0 165px;
+    }
+
+    .pod-logo {
+        margin-bottom: 103px;
+    }
+    
+    main {
         width: 60vw;
-        max-width: 700px;
+        max-width: 724px;
     }
 }
