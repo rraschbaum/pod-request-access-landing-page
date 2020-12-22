@@ -8,15 +8,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@300;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-
-  <script type="text/javascript" src="/js/script.js"></script>
   
   <title>Frontend Mentor | Pod request access landing page</title>
 </head>
-
 <body>
   <div class="container">
-    <header>
+    <header class="header">
       <img src="/assets/desktop/logo.svg" alt="pod logo" class="pod-logo">
     </header>
 
@@ -24,26 +21,28 @@
       <div class="main--content">
         <h1 class="headline">Publish your podcasts <br><span class="highlight">everywhere.</span></h1>
          <p class="body">Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and more!</p>
-    </div>
+      </div>
 
-      <form action="">
+      <form id ="form" action="#" method="GET">
         <div class="form-container">
-          <input type="text" value="Email address">
-          <button class="button" type="submit">Request access</button>
+          <input id="email" required id="email-address" name="email" type="email" placeholder="Email address">
+          <button class="button" id="submit-btn" type="submit">Request access</button>
         </div>
       </form>
 
+        <p class="error" id="error"></p>
+
       <div class="partners">
-        <a href="https://www.spotify.com/us/" class="partners--item" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.spotify.com/us/" class="partners__item" target="_blank" rel="noopener noreferrer">
           <img src="/assets/desktop/spotify.svg" alt="spotify logo">
         </a>
-        <a href="https://apps.apple.com/us/app/apple-podcasts/id525463029" class="partners--item" target="_blank" rel="noopener noreferrer">
+        <a href="https://apps.apple.com/us/app/apple-podcasts/id525463029" class="partners__item" target="_blank" rel="noopener noreferrer">
           <img src="/assets/desktop/apple-podcast.svg" alt="apple podcast logo">
         </a>
-        <a href="https://podcasts.google.com/" class="partners--item" target="_blank" rel="noopener noreferrer">
+        <a href="https://podcasts.google.com/" class="partners__item" target="_blank" rel="noopener noreferrer">
           <img src="/assets/desktop/google-podcasts.svg" alt="google podcast logo">
         </a>
-        <a href="https://www.pocketcasts.com/" class="partners--item" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.pocketcasts.com/" class="partners__item" target="_blank" rel="noopener noreferrer">
           <img src="/assets/desktop/pocket-casts.svg" alt="pocket casts logo">
         </a>
       </div>
@@ -51,5 +50,6 @@
     </main>
   </div>
 
+  <script src="/js/script.js"></script>
 </body>
 </html>
