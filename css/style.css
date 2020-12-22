@@ -128,17 +128,43 @@ form {
     align-items: center;
     justify-content: space-between;
     flex-basis: 0;
+    height: 17px;
     width: 100%;
+    margin-bottom: 48px;
+}
+
+.partners__item img,
+.partners__item 
+ {
+    height: inherit;
+}
+
+
+
+/* ======== test
+
+/* .partners {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 0;
+    height: auto;
     margin-bottom: 48px;
 }
 
 .partners__item {
     margin-left: 16px;
+    width: inherit;
+}
+
+.partners__item img {
+    max-height: 100%;
+    height: inherit;
 }
 
 .partners__item:first-child {
     margin-left: 0;
-}
+} */
 
 /* ======== media queries ======== */
 
